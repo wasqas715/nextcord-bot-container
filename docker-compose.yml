@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  discordbot:
+    image: discordbot
+    env_file:
+      - stack.env
+    environment:
+      TOKEN: ${DISCORD_TOKEN}
+    build:
+      context: .
+      dockerfile: ./Dockerfile
